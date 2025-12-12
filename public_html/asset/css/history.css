@@ -1,0 +1,190 @@
+/* ============================================
+   HISTORY PAGE HERO SECTION
+   ============================================ */
+
+.history-page-hero {
+  padding: 6rem 0 6rem;
+  background:
+    radial-gradient(circle at top left, rgba(246, 201, 0, 0.385), transparent 70%),
+    linear-gradient(to right, #fff7df 43%,  #fff7df 5%,  #fff7df 53%, rgba(122,0,25,0.06) 70%) , url("../../images/bg.png");
+}
+
+.history-page-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.history-page-hero-text {
+  /* Left column content container */
+}
+
+.history-page-hero-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+
+.history-page-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.history-page-hero-accent {
+  color: #f6c700;
+}
+
+.history-page-hero-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  max-width: 90%;
+}
+
+.history-page-hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.history-page-btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--maroon);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.history-page-btn-primary:hover {
+  background: var(--maroon-900);
+}
+
+.history-page-btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  color: var(--maroon);
+  font-weight: 600;
+  border: 2px solid var(--maroon);
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.history-page-btn-secondary:hover {
+  background: var(--maroon);
+  color: #ffffff;
+}
+
+.history-page-hero-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.history-page-pill {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: #f3f4f6;
+  color: var(--maroon);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.history-page-pill:hover {
+  background: var(--maroon);
+  color: #ffffff;
+}
+
+.history-page-hero-card {
+  order: 0;
+}
+
+.history-page-hero-card-content {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 18px 45px rgba(15,23,42,0.08);
+}
+
+/* Responsive Design for History Page Hero */
+@media (max-width: 1400px) {
+  .history-page-hero-inner {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .history-page-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .history-page-hero-card {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-page-hero {
+    padding: 2.5rem 0;
+  }
+  
+  .history-page-hero-title {
+    font-size: 2rem;
+  }
+  
+  .history-page-hero-description {
+    max-width: 100%;
+    font-size: 0.9375rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .history-page-hero-pills {
+    margin-top: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .history-page-hero {
+    padding: 2rem 0;
+  }
+  
+  .history-page-hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .history-page-hero-description {
+    font-size: 0.875rem;
+  }
+  
+  .history-page-hero-card-content {
+    padding: 1rem;
+  }
+  
+  .history-page-hero-pills {
+    gap: 0.375rem;
+  }
+  
+  .history-page-pill {
+    font-size: 0.8125rem;
+    padding: 0.35rem 0.75rem;
+  }
+}

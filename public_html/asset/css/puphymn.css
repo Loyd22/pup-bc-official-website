@@ -1,0 +1,207 @@
+/* ============================================
+   PUP HYMN PAGE HERO SECTION
+   ============================================ */
+
+   .puphymn-page-hero {
+    padding: 6rem 0 6rem;
+    background:
+      radial-gradient(circle at top left, rgba(246, 201, 0, 0.385), transparent 70%),
+      linear-gradient(to right, #fff7df 43%,  #fff7df 5%,  #fff7df 53%, rgba(122,0,25,0.06) 70%) , url("../../images/bg.png");
+  }
+  
+  .puphymn-page-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .puphymn-page-hero-text {
+    /* Left column content container */
+  }
+  
+  .puphymn-page-hero-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+  }
+  
+  .puphymn-page-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    color: var(--ink);
+  }
+  
+  .puphymn-page-hero-accent {
+    color: #f6c700;
+  }
+  
+  .puphymn-page-hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0 0 1rem;
+    max-width: 90%;
+  }
+  
+  .puphymn-page-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .puphymn-page-btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--maroon);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  
+  .puphymn-page-btn-primary:hover {
+    background: var(--maroon-900);
+  }
+  
+  .puphymn-page-btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #ffffff;
+    color: var(--maroon);
+    font-weight: 600;
+    border: 2px solid var(--maroon);
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .puphymn-page-btn-secondary:hover {
+    background: var(--maroon);
+    color: #ffffff;
+  }
+  
+  .puphymn-page-hero-pills {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .puphymn-page-pill {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    background: #f3f4f6;
+    color: var(--maroon);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .puphymn-page-pill:hover {
+    background: var(--maroon);
+    color: #ffffff;
+  }
+  
+  .puphymn-page-hero-card {
+    order: 0;
+  }
+  
+  .puphymn-page-hero-card-content {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 18px 45px rgba(15,23,42,0.08);
+  }
+  
+  /* Responsive Design for PUP Hymn Page Hero */
+  @media (max-width: 1400px) {
+    .puphymn-page-hero-inner {
+      gap: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .puphymn-page-hero-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .puphymn-page-hero-card {
+      order: -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .puphymn-page-hero {
+      padding: 2.5rem 0;
+    }
+    
+    .puphymn-page-hero-title {
+      font-size: 2rem;
+    }
+    
+    .puphymn-page-hero-description {
+      max-width: 100%;
+      font-size: 0.9375rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .puphymn-page-hero-pills {
+      margin-top: 0.75rem;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .puphymn-page-hero {
+      padding: 2rem 0;
+    }
+    
+    .puphymn-page-hero-title {
+      font-size: 1.75rem;
+    }
+    
+    .puphymn-page-hero-description {
+      font-size: 0.875rem;
+    }
+    
+    .puphymn-page-hero-card-content {
+      padding: 1rem;
+    }
+    
+    .puphymn-page-hero-pills {
+      gap: 0.375rem;
+    }
+    
+    .puphymn-page-pill {
+      font-size: 0.8125rem;
+      padding: 0.35rem 0.75rem;
+    }
+  }
+  
+  .puphymn-video-title {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: rgb(138, 138, 138);
+    font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  
+  .hymnlyrics{
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: var(--ink);
+    text-align: center;
+   
+  }

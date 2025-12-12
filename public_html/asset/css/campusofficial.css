@@ -1,0 +1,657 @@
+/* ============================================
+   CAMPUS OFFICES PAGE HERO SECTION
+   ============================================ */
+
+.campusoffices-page-hero {
+  padding: 6rem 0 6rem;
+  background:
+    radial-gradient(circle at top left, rgba(246, 201, 0, 0.385), transparent 70%),
+    linear-gradient(to right, #fff7df 43%,  #fff7df 5%,  #fff7df 53%, rgba(122,0,25,0.06) 70%) , url("../../images/bg.png");
+}
+
+.campusoffices-page-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.campusoffices-page-hero-text {
+  /* Left column content container */
+}
+
+.campusoffices-page-hero-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+
+.campusoffices-page-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.campusoffices-page-hero-accent {
+  color: #f6c700;
+}
+
+.campusoffices-page-hero-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  max-width: 90%;
+}
+
+.campusoffices-page-hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.campusoffices-page-btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--maroon);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.campusoffices-page-btn-primary:hover {
+  background: var(--maroon-900);
+}
+
+.campusoffices-page-btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  color: var(--maroon);
+  font-weight: 600;
+  border: 2px solid var(--maroon);
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.campusoffices-page-btn-secondary:hover {
+  background: var(--maroon);
+  color: #ffffff;
+}
+
+.campusoffices-page-hero-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.campusoffices-page-pill {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: #f3f4f6;
+  color: var(--maroon);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.campusoffices-page-pill:hover {
+  background: var(--maroon);
+  color: #ffffff;
+}
+
+.campusoffices-page-hero-card {
+  order: 0;
+}
+
+.campusoffices-page-hero-card-content {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 18px 45px rgba(15,23,42,0.08);
+}
+
+/* Responsive Design for Campus Offices Page Hero */
+@media (max-width: 1400px) {
+  .campusoffices-page-hero-inner {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .campusoffices-page-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .campusoffices-page-hero-card {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .campusoffices-page-hero {
+    padding: 2.5rem 0;
+  }
+  
+  .campusoffices-page-hero-title {
+    font-size: 2rem;
+  }
+  
+  .campusoffices-page-hero-description {
+    max-width: 100%;
+    font-size: 0.9375rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .campusoffices-page-hero-pills {
+    margin-top: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .campusoffices-page-hero {
+    padding: 2rem 0;
+  }
+  
+  .campusoffices-page-hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .campusoffices-page-hero-description {
+    font-size: 0.875rem;
+  }
+  
+  .campusoffices-page-hero-card-content {
+    padding: 1rem;
+  }
+  
+  .campusoffices-page-hero-pills {
+    gap: 0.375rem;
+  }
+  
+  .campusoffices-page-pill {
+    font-size: 0.8125rem;
+    padding: 0.35rem 0.75rem;
+  }
+}
+
+/* ============================================
+   Campus Officials Page Enhancements
+============================================ */
+
+.campus-officials-hero {
+    min-height: 320px;
+  }
+  
+  .campus-officials-hero .hero-inner {
+    align-items: center;
+  }
+  
+  .campusoff-structure {
+    position: relative;
+    background: linear-gradient(180deg, #6c0016 0%, #4a0010 55%, #250008 100%);
+    color: #fff;
+    padding: clamp(2rem, 4vw, 4rem) 0 clamp(2.5rem, 6vw, 5rem);
+    overflow: hidden;
+  }
+  
+  .campusoff-structure::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 60%);
+    opacity: .6;
+    pointer-events: none;
+  }
+  
+  .campusoff-structure .campus-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1500px;
+  
+      padding: 0 1rem;
+      margin:20px
+  }
+  
+  .campusoff-structure-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+  }
+  .personel{
+
+        background: linear-gradient(90deg, #d4af37 0%, #f6d76c 50%, #d4af37 100%);
+    color: maroon;
+    padding:0px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    border-radius: 0px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .25);
+    width: 100%;
+    max-width: 1500px;
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+border: #540013 solid 1px;
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+    align-content: center;
+  }
+
+
+  .campusoff-tag {
+    display: inline-flex;
+    padding: .3rem 1.1rem;
+    border-radius: 999px;
+    background: linear-gradient(120deg, #f3b233, #ffd56a);
+    color: #540013;
+    letter-spacing: .35em;
+    font-weight: 700;
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+  
+  .campusoff-structure-head h2 {
+    margin: .85rem 0 .35rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .campusoff-note {
+    color: rgba(255, 255, 255, .85);
+    font-size: 1rem;
+  }
+  
+  .campusoff-panels {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .campusoff-panel {
+    background:  radial-gradient(circle at top left, rgba(246, 201, 0, 0.385), transparent 50%), radial-gradient(circle at bottom left, rgba(246, 201, 0, 0.385), transparent 50%), url("../../images/cof.png") transparent 100% ;
+    border-radius: 0px;
+    padding: 1.5rem;
+    border: 10px solid #f3b233;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .35);
+  }
+  
+  .campusoff-panel header {
+    background: linear-gradient(90deg, #f3b233, #ffd56a);
+    border-radius: 16px;
+    padding: .9rem 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: #4a0010;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .35);
+  }
+  
+  .campusoff-panel header h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .campusoff-highlight {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(180deg, rgba(143, 0, 29, 0.98), rgba(80, 0, 13, 0.95));
+    border-radius: 0px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 215, 128, 0.4);
+    box-shadow: 0 20px 38px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .campusoff-grid {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.2rem;
+    justify-items: center;
+  
+  }
+  
+  .campusoff-grid.support {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .campusoff-slot {
+    width: 100%;
+    max-width: 320px;
+    background: linear-gradient(180deg, rgba(128, 0, 25, 0.92), rgba(65, 0, 11, 0.95));
+    border-radius: 0px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+  }
+  
+  .campusoff-photo {
+    width: 100%;
+    height: 300px;
+    border-radius: 0px;
+    border: 2px solid rgba(255, 255, 255, .4);
+    background: linear-gradient(135deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .05));
+    margin-bottom: .85rem;
+    overflow: hidden;
+  }
+  
+  .campusoff-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+
+
+  .campusoff-name {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+  font-family: 'Times New Roman', Times, serif;
+border-bottom: 0.5px solid #f3b233;
+padding-bottom: 5px;
+}
+    
+  
+  .campusoff-role {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: .9rem;
+    color: rgba(255, 255, 255, .85);
+    letter-spacing: .5px;
+
+  }
+  
+  .campusoff-empty {
+    margin-top: 1.25rem;
+    text-align: center;
+    color: rgba(255, 255, 255, .85);
+    font-size: .95rem;
+  }
+  
+  @media (max-width: 720px) {
+    .campusoff-panel {
+      padding: 1.1rem;
+    }
+  
+    .campusoff-panel header {
+      text-align: center;
+    }
+  
+    .campusoff-slot {
+      min-height: 210px;
+    }
+  }
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS - CAMPUS OFFICIALS
+   ============================================ */
+
+/* Large Desktop (1400px) */
+@media (max-width: 1400px) {
+  .campusoff-structure .campus-container {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+  
+  .campusoff-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+/* Desktop (1200px) */
+@media (max-width: 1200px) {
+  .campusoff-structure .campus-container {
+    padding: 0 1.25rem;
+  }
+  
+  .campusoff-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  
+  .campusoff-grid.support {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* Tablet (992px) */
+@media (max-width: 992px) {
+  .campusoff-structure {
+    padding: clamp(1.5rem, 3vw, 3rem) 0 clamp(2rem, 5vw, 4rem);
+  }
+  
+  .campusoff-structure .campus-container {
+    padding: 0 1rem;
+    margin: 15px;
+  }
+  
+  .campusoff-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  
+  .campusoff-grid.support {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .campusoff-slot {
+    max-width: 100%;
+    min-height: 380px;
+  }
+  
+  .campusoff-photo {
+    height: 390px;
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .campusoff-structure .campus-container {
+    padding: 0 1rem;
+    margin: 10px;
+  }
+  
+  .campusoff-structure-head {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .campusoff-panel {
+    padding: 1.25rem;
+  }
+  
+  .campusoff-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.875rem;
+  }
+  
+  .campusoff-grid.support {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  .campusoff-slot {
+    min-height: 360px;
+    padding: 0.875rem;
+  }
+  
+  .campusoff-photo {
+    height: 400px;
+  }
+  
+  .campusoff-highlight {
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
+
+/* Smartphone (640px) */
+@media (max-width: 640px) {
+  .campusoff-structure {
+    padding: 1.5rem 0 2.5rem;
+  }
+  
+  .campusoff-structure .campus-container {
+    padding: 0 0.875rem;
+    margin: 8px;
+  }
+  
+  .campusoff-structure-head {
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .campusoff-structure-head h2 {
+    font-size: 1.75rem;
+  }
+  
+  .campusoff-panel {
+    padding: 1rem;
+  }
+  
+  .campusoff-panel header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .campusoff-panel header h3 {
+    font-size: 0.9rem;
+  }
+  
+  .campusoff-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .campusoff-grid.support {
+    grid-template-columns: 1fr;
+  }
+  
+  .campusoff-slot {
+    max-width: 100%;
+    min-height: 340px;
+    padding: 0.75rem;
+  }
+  
+  .campusoff-photo {
+    height: 400px;
+  }
+  
+  .campusoff-name {
+    font-size: 0.95rem;
+  }
+  
+  .campusoff-role {
+    font-size: 0.85rem;
+  }
+  
+  .campusoff-highlight {
+    padding: 0.875rem;
+  }
+}
+
+/* Small Smartphone (576px) */
+@media (max-width: 576px) {
+  .campusoff-structure .campus-container {
+    padding: 0 0.75rem;
+    margin: 6px;
+  }
+  
+  .campusoff-structure-head h2 {
+    font-size: 1.5rem;
+  }
+  
+  .campusoff-panel {
+    padding: 0.875rem;
+  }
+  
+  .campusoff-panel header {
+    padding: 0.65rem 0.875rem;
+  }
+  
+  .campusoff-panel header h3 {
+    font-size: 0.85rem;
+  }
+  
+  .campusoff-slot {
+    min-height: 320px;
+    padding: 0.65rem;
+  }
+  
+  .campusoff-photo {
+    height: 380px;
+  }
+  
+  .campusoff-name {
+    font-size: 0.9rem;
+  }
+  
+  .campusoff-role {
+    font-size: 0.8rem;
+  }
+}
+
+/* ============================================
+   LARGE SCREEN RESPONSIVE CONSTRAINTS - CAMPUS OFFICIALS PAGE
+   ============================================ */
+
+/* Extra Large Desktops (1600px+) */
+@media (min-width: 1600px) {
+  .campusoff-structure .campus-container {
+    max-width: 1450px;
+    margin: 0 auto;
+  }
+}
+
+/* Ultra Wide Screens (1920px+) */
+@media (min-width: 1920px) {
+  .campusoff-structure .campus-container {
+    max-width: 1450px;
+  }
+}
+
+/* 4K and Ultra Wide (2560px+) */
+@media (min-width: 2560px) {
+  .campusoff-structure .campus-container {
+    max-width: 1600px;
+  }
+}
+  

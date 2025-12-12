@@ -1,0 +1,13 @@
+[2025-10-21T07:09:45+02:00] POST payload: {"title":"BadAdmin","summary":"Summary text","body":"Full body","publish_date":"2025-10-21","is_published":"on"}
+[2025-10-21T07:12:10+02:00] POST payload: {"title":"Check Title","summary":"Summary text","body":"Body","publish_date":"","is_published":"on"}
+[2025-10-21T07:12:10+02:00] Created news 'Check Title' with admin 3
+[2025-10-21T07:12:35+02:00] POST payload: {"title":"Check Title 2","summary":"Summary","body":"Body","publish_date":"","is_published":"on"}
+[2025-10-21T07:12:35+02:00] Created news 'Check Title 2' without admin ID
+[2025-10-21T08:15:23+02:00] POST payload: {"title":"Simulated News","summary":"Summary text","body":"Body content","publish_date":"","is_published":"on"}
+[2025-10-21T08:15:23+02:00] Created news 'Simulated News' with admin 3
+[2025-10-21T08:28:37+02:00] POST payload: {"title":"Simulated Again","summary":"Summary text","body":"Body content","publish_date":"","is_published":"on"}
+[2025-10-21T08:28:37+02:00] Created news 'Simulated Again' with admin 3
+[2025-10-21T08:44:05+02:00] POST payload: {"title":"From Script","summary":"Summary","body":"Body","publish_date":"2025-10-21","is_published":"on"}
+[2025-10-21T08:44:05+02:00] Created news 'From Script' with admin 3
+[2025-10-21T08:54:38+02:00] POST payload: {"title":"Recreate Test","summary":"Summary text","body":"Body text","publish_date":"","is_published":"on"}
+[2025-10-21T08:54:38+02:00] Created news 'Recreate Test' with admin 3

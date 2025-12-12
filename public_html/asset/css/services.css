@@ -1,0 +1,69 @@
+/* Student Services Badges: styles the services highlight chips */
+/* Horizontal wrap layout for the Student Services icon badges */
+.svc-icons{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem}
+/* Individual badge appearance for Student Services highlights */
+.svc-icons .badge{font-size:.8rem;padding:.25rem .5rem;border:1px solid var(--border);border-radius:.5rem;background:#f9fafb}
+
+/* Downloadable Forms Link Section - Separated for easy modification */
+.downloadable-forms-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.downloadable-forms-link p {
+  margin: 0;
+}
+
+.downloadable-forms-link a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--maroon);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.downloadable-forms-link a:hover {
+  color: var(--maroon-900);
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS - SERVICES PAGE
+   ============================================ */
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .downloadable-forms-link {
+    margin-top: 1.5rem;
+  }
+  
+  .downloadable-forms-link a {
+    font-size: 1rem;
+  }
+}
+
+/* Smartphone (640px) */
+@media (max-width: 640px) {
+  .downloadable-forms-link {
+    margin-top: 1.25rem;
+  }
+  
+  .downloadable-forms-link a {
+    font-size: 0.95rem;
+  }
+  
+  .svc-icons {
+    gap: 0.4rem;
+  }
+  
+  .svc-icons .badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.45rem;
+  }
+}
+
+/* Small Smartphone (576px) */
+@media (max-width: 576px) {
+  .downloadable-forms-link a {
+    font-size: 0.9rem;
+  }
+}

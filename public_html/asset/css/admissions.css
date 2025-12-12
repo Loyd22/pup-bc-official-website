@@ -1,0 +1,927 @@
+/* Admissions Page Helpers: styles the application guide content */
+/* Admissions steps wrapper on the Admissions guide page */
+.step-list{display:grid;gap:.65rem}
+/* Individual step card describing each admissions requirement */
+.step{display:grid;gap:.25rem;padding:.9rem 1rem;border-left:4px solid var(--maroon);background:#fff;border-radius:.25rem}
+/* Number badge for admissions steps */
+.num{font-weight:800;color:var(--maroon);font-size:.85rem}
+/* Highlight box for reminders and special notes */
+.callout{padding:1rem;border:1px dashed var(--border);border-radius:.9rem;background:#fff}
+
+/* PUPCET How to Apply Section Styles */
+:root {
+  --pup-maroon: #7a0019;
+  --pup-gold: #f3b233;
+  --pup-light: #fff8e6;
+}
+
+.pup-how-to-apply {
+  max-width: 1260px;
+  margin: 40px auto 60px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+  padding: 24px 20px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #fffaf2 45%, #fff5e0 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pup-hta-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-left: 8px solid var(--pup-maroon);
+  padding-left: 18px;
+}
+
+.pup-hta-title-block h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 26px;
+  margin: 2px 0 4px;
+  color: var(--pup-maroon);
+}
+
+.pup-hta-subtitle {
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--pup-maroon);
+  font-weight: 600;
+}
+
+.pup-hta-title-block {
+  position: relative;
+}
+
+.pup-hta-title-block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pup-gold), var(--pup-maroon));
+  border-radius: 999px;
+}
+
+/* STEP CONTAINER */
+.apply-step {
+  position: relative;
+  margin: 26px 0;
+  padding: 20px 90px 18px 30px;
+  border-radius: 40px;
+  border: 3px solid var(--pup-maroon);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* alternating subtle background */
+.apply-step:nth-child(odd) {
+  background: #ffffff;
+}
+
+.apply-step:nth-child(even) {
+  background: var(--pup-light);
+}
+
+/* ARROW TAIL (LEFT ROUND DOT) */
+.apply-step::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--pup-maroon);
+}
+
+/* ARROW HEAD (RIGHT) */
+.apply-step::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid var(--pup-maroon);
+}
+
+.step-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pup-maroon), #b51a1a);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 8px;
+}
+
+.step-number {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pup-gold);
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.step-text {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.apply-step p {
+  margin: 4px 0 0;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.apply-step strong {
+  color: #333;
+}
+
+.apply-step a {
+  color: #005b99;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.apply-step a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .pup-how-to-apply {
+    padding: 18px 14px 28px;
+  }
+
+  .pup-hta-header {
+    border-left-width: 6px;
+    padding-left: 14px;
+  }
+
+  .pup-hta-title-block h2 {
+    font-size: 22px;
+  }
+
+  .apply-step {
+    padding: 18px 70px 16px 24px;
+  }
+
+  .apply-step::before {
+    left: -24px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apply-step {
+    padding-right: 58px;
+  }
+
+  .step-pill {
+    padding: 5px 12px;
+  }
+
+  .step-text {
+    font-size: 14px;
+  }
+}
+
+/* PUPCET Qualifications and Application Info Section Styles */
+.pup-qualifications-info {
+  max-width: 1260px;
+  margin: 40px auto 60px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+  padding: 24px 20px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #fffaf2 45%, #fff5e0 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pup-qi-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-left: 8px solid var(--pup-maroon);
+  padding-left: 18px;
+}
+
+.pup-qi-title-block h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 26px;
+  margin: 2px 0 4px;
+  color: var(--pup-maroon);
+}
+
+.pup-qi-subtitle {
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--pup-maroon);
+  font-weight: 600;
+}
+
+.pup-qi-title-block {
+  position: relative;
+}
+
+.pup-qi-title-block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pup-gold), var(--pup-maroon));
+  border-radius: 999px;
+}
+
+.qualification-item {
+  position: relative;
+  margin: 26px 0;
+  padding: 20px 30px 18px 30px;
+  border-radius: 40px;
+  border: 3px solid var(--pup-maroon);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.qualification-item:nth-child(odd) {
+  background: #ffffff;
+}
+
+.qualification-item:nth-child(even) {
+  background: var(--pup-light);
+}
+
+.qualification-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pup-maroon), #b51a1a);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 12px;
+}
+
+.qualification-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pup-gold);
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.qualification-label {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.qualification-content {
+  margin-top: 8px;
+}
+
+.qualification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.qualification-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.qualification-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--pup-maroon);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.qualification-list li:last-child {
+  margin-bottom: 0;
+}
+
+.qualification-content strong {
+  color: #333;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .pup-qualifications-info {
+    padding: 18px 14px 28px;
+  }
+
+  .pup-qi-header {
+    border-left-width: 6px;
+    padding-left: 14px;
+  }
+
+  .pup-qi-title-block h2 {
+    font-size: 22px;
+  }
+
+  .qualification-item {
+    padding: 18px 20px 16px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .qualification-pill {
+    padding: 5px 12px;
+  }
+
+  .qualification-label {
+    font-size: 14px;
+  }
+
+  .qualification-list li {
+    font-size: 13px;
+  }
+}
+
+/* PUPCET General Requirements Section Styles */
+.pup-requirements {
+  max-width: 1260px;
+  margin: 40px auto 60px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+  padding: 24px 20px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #fffaf2 45%, #fff5e0 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pup-req-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-left: 8px solid var(--pup-maroon);
+  padding-left: 18px;
+}
+
+.pup-req-title-block h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 26px;
+  margin: 2px 0 4px;
+  color: var(--pup-maroon);
+}
+
+.pup-req-subtitle {
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--pup-maroon);
+  font-weight: 600;
+}
+
+.pup-req-title-block {
+  position: relative;
+}
+
+.pup-req-title-block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pup-gold), var(--pup-maroon));
+  border-radius: 999px;
+}
+
+.requirement-item {
+  position: relative;
+  margin: 20px 0;
+  padding: 16px 24px;
+  border-radius: 40px;
+  border: 3px solid var(--pup-maroon);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.requirement-item:nth-child(odd) {
+  background: #ffffff;
+}
+
+.requirement-item:nth-child(even) {
+  background: var(--pup-light);
+}
+
+.requirement-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.requirement-icon {
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pup-gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.requirement-text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .pup-requirements {
+    padding: 18px 14px 28px;
+  }
+
+  .pup-req-header {
+    border-left-width: 6px;
+    padding-left: 14px;
+  }
+
+  .pup-req-title-block h2 {
+    font-size: 22px;
+  }
+
+  .requirement-item {
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .requirement-pill {
+    gap: 10px;
+  }
+
+  .requirement-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+
+  .requirement-text {
+    font-size: 14px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS - ADMISSIONS PAGE
+   ============================================ */
+
+/* Large Desktop (1400px) */
+@media (max-width: 1400px) {
+  /* Adjustments for large screens */
+}
+
+/* Desktop (1200px) */
+@media (max-width: 1200px) {
+  /* Adjustments for desktop */
+}
+
+/* Tablet (992px) */
+@media (max-width: 992px) {
+  /* Stack layouts on tablet */
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  /* Mobile optimizations */
+}
+
+/* Smartphone (640px) */
+@media (max-width: 640px) {
+  /* Smaller mobile adjustments */
+}
+
+/* Small Smartphone (576px) */
+@media (max-width: 576px) {
+  /* Smallest mobile adjustments */
+}
+
+/* Transfer Admission Guidelines Section Styles */
+.pup-transfer-admission {
+  max-width: 1260px;
+  margin: 40px auto 60px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+  padding: 24px 20px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #fffaf2 45%, #fff5e0 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pup-ta-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-left: 8px solid var(--pup-maroon);
+  padding-left: 18px;
+}
+
+.pup-ta-title-block h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 26px;
+  margin: 2px 0 4px;
+  color: var(--pup-maroon);
+}
+
+.pup-ta-subtitle {
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--pup-maroon);
+  font-weight: 600;
+}
+
+.pup-ta-title-block {
+  position: relative;
+}
+
+.pup-ta-title-block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pup-gold), var(--pup-maroon));
+  border-radius: 999px;
+}
+
+.transfer-category {
+  position: relative;
+  margin: 26px 0;
+  padding: 24px 30px;
+  border-radius: 40px;
+  border: 3px solid var(--pup-maroon);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.transfer-category:nth-child(odd) {
+  background: #ffffff;
+}
+
+.transfer-category:nth-child(even) {
+  background: var(--pup-light);
+}
+
+.transfer-category-header {
+  margin-bottom: 16px;
+}
+
+.transfer-category-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--pup-maroon);
+  margin: 0;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pup-maroon), #b51a1a);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+}
+
+.transfer-content {
+  margin-top: 12px;
+}
+
+.transfer-intro {
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #333;
+}
+
+.transfer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.transfer-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #333;
+}
+
+.transfer-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--pup-maroon);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.transfer-list li:last-child {
+  margin-bottom: 0;
+}
+
+.transfer-requirements-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+  counter-reset: requirement-counter;
+}
+
+.transfer-requirements-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #333;
+  counter-increment: requirement-counter;
+}
+
+.transfer-requirements-list li::before {
+  content: counter(requirement-counter) ".";
+  position: absolute;
+  left: 0;
+  color: var(--pup-maroon);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.transfer-requirements-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .pup-transfer-admission {
+    padding: 18px 14px 28px;
+  }
+
+  .pup-ta-header {
+    border-left-width: 6px;
+    padding-left: 14px;
+  }
+
+  .pup-ta-title-block h2 {
+    font-size: 22px;
+  }
+
+  .transfer-category {
+    padding: 20px 20px;
+  }
+
+  .transfer-category-header h3 {
+    font-size: 18px;
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transfer-category-header h3 {
+    font-size: 16px;
+    padding: 5px 12px;
+  }
+
+  .transfer-list li,
+  .transfer-requirements-list li {
+    font-size: 13px;
+  }
+
+  .transfer-intro {
+    font-size: 13px;
+  }
+}
+
+/* Enrollment Procedure Section Styles - Simple Design */
+.pup-enrollment-procedure {
+  max-width: 1260px;
+  margin: 40px auto 60px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+  padding: 24px 20px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #fffaf2 45%, #fff5e0 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pup-ep-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-left: 8px solid var(--pup-maroon);
+  padding-left: 18px;
+}
+
+.pup-ep-title-block h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 26px;
+  margin: 2px 0 4px;
+  color: var(--pup-maroon);
+}
+
+.pup-ep-subtitle {
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--pup-maroon);
+  font-weight: 600;
+}
+
+.pup-ep-title-block {
+  position: relative;
+}
+
+.pup-ep-title-block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pup-gold), var(--pup-maroon));
+  border-radius: 999px;
+}
+
+.enrollment-step-item {
+  position: relative;
+  margin: 20px 0;
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 2px solid var(--pup-maroon);
+  background: #ffffff;
+}
+
+.enrollment-step-item:nth-child(odd) {
+  background: #ffffff;
+}
+
+.enrollment-step-item:nth-child(even) {
+  background: var(--pup-light);
+}
+
+.enrollment-step-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.enrollment-step-number {
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(90deg, var(--pup-maroon), #b51a1a);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.enrollment-step-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.enrollment-step-content {
+  margin-top: 12px;
+  padding-left: 0;
+}
+
+.requirements-label {
+  font-weight: 600;
+  color: var(--pup-maroon);
+  margin: 12px 0 8px 0;
+  font-size: 14px;
+}
+
+.enrollment-requirements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.enrollment-requirements-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #333;
+}
+
+.enrollment-requirements-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--pup-maroon);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.enrollment-requirements-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .pup-enrollment-procedure {
+    padding: 18px 14px 28px;
+  }
+
+  .pup-ep-header {
+    border-left-width: 6px;
+    padding-left: 14px;
+  }
+
+  .pup-ep-title-block h2 {
+    font-size: 22px;
+  }
+
+  .enrollment-step-item {
+    padding: 18px 20px;
+  }
+
+  .enrollment-step-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .enrollment-step-number {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .enrollment-step-number {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+
+  .enrollment-step-title {
+    font-size: 15px;
+  }
+
+  .enrollment-requirements-list li {
+    font-size: 13px;
+  }
+
+  .requirements-label {
+    font-size: 13px;
+  }
+}

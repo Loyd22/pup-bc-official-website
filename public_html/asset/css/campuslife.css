@@ -1,0 +1,825 @@
+/* ===============================
+   Campus Life Page Styling
+================================= */
+
+/* ===============================
+   CAMPUS LIFE CAROUSEL
+================================= */
+
+/* Main carousel container */
+.campus-life-carousel {
+  padding: 4rem 0;
+  background: var(--bg);
+  position: relative;
+}
+
+.campus-life-carousel .container {
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+/* Carousel track - horizontal scrolling container */
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Individual carousel panel */
+.carousel-panel {
+  min-width: 100%;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-900) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+/* Panel background overlay effect */
+.carousel-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(135deg, rgba(122, 0, 25, 0.75) 0%, rgba(84, 0, 19, 0.85) 100%),
+    radial-gradient(circle at 20% 50%, rgba(243, 178, 51, 0.2), transparent 60%),
+    radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.12), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Panel content wrapper */
+.panel-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 850px;
+  padding: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panel-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin: 0 0 1.5rem;
+  color: #fff;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  font-family: var(--nav-font);
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.panel-description {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.95;
+  color: #faf8f6;
+  font-weight: 400;
+}
+
+/* Navigation arrows - hidden */
+.carousel-nav {
+  display: none !important;
+}
+
+/* Panel indicators (dots) */
+.carousel-indicators {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  position: relative;
+}
+
+.indicator::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.indicator:hover::before {
+  opacity: 1;
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 1);
+  transform: scale(1.3);
+}
+
+.indicator.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  width: 36px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(243, 178, 51, 0.5);
+}
+
+.indicator:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 920px) {
+  .campus-life-carousel {
+    padding: 3rem 0;
+  }
+
+  .carousel-panel {
+    padding: 4rem 2rem;
+    min-height: 350px;
+  }
+
+  .panel-content {
+    padding: 1.5rem;
+  }
+
+  .panel-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .panel-description {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+
+  .carousel-nav {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .carousel-prev {
+    left: 1rem;
+  }
+
+  .carousel-next {
+    right: 1rem;
+  }
+
+  .carousel-indicators {
+    bottom: 1.5rem;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .campus-life-carousel {
+    padding: 2rem 0;
+  }
+
+  .carousel-container {
+    border-radius: 0.75rem;
+  }
+
+  .carousel-panel {
+    padding: 3rem 1.5rem;
+    min-height: 300px;
+  }
+
+  .panel-content {
+    padding: 1rem;
+  }
+
+  .panel-title {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .panel-description {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    line-height: 1.6;
+  }
+
+  .carousel-nav {
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
+  }
+
+  .carousel-prev {
+    left: 0.75rem;
+  }
+
+  .carousel-next {
+    right: 0.75rem;
+  }
+
+  .carousel-indicators {
+    bottom: 1rem;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  .indicator.active {
+    width: 28px;
+  }
+}
+
+/* ===============================
+   ACCESSIBILITY
+================================= */
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    transition: none;
+  }
+
+  .panel-content {
+    animation: none;
+  }
+
+  .carousel-nav {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .carousel-nav:hover {
+    transform: translateY(-50%);
+  }
+
+  .indicator {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .indicator:hover {
+    transform: none;
+  }
+
+  .indicator.active {
+    transition: width 0.2s ease, background-color 0.2s ease;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .carousel-nav {
+    border: 3px solid var(--maroon);
+  }
+
+  .indicator {
+    border-width: 3px;
+  }
+}
+
+/* ===============================
+   CAMPUS LIFE FEATURE CARD
+================================= */
+
+.campus-life-feature {
+  padding: 4rem 0;
+  background: var(--bg);
+}
+
+.campus-life-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.campus-life-card-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+}
+
+.campus-life-text {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.campus-life-text h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--maroon);
+  margin: 0;
+  font-family: var(--nav-font);
+  line-height: 1.2;
+}
+
+.campus-life-text p {
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.8;
+  color: var(--ink);
+  margin: 0;
+}
+
+.campus-life-image {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.campus-life-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 920px) {
+  .campus-life-feature {
+    padding: 3rem 0;
+  }
+
+  .campus-life-card-content {
+    grid-template-columns: 1fr;
+  }
+
+  .campus-life-text {
+    padding: 2rem;
+    order: 2;
+  }
+
+  .campus-life-image {
+    order: 1;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 560px) {
+  .campus-life-feature {
+    padding: 2rem 0;
+  }
+
+  .campus-life-text {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .campus-life-image {
+    min-height: 250px;
+  }
+}
+
+/* ===============================
+   UNIVERSITY TRADITIONS SECTION
+================================= */
+
+.university-traditions {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-900) 100%);
+  color: #fff;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle pattern overlay for depth */
+.university-traditions::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(243, 178, 51, 0.1), transparent 60%),
+    radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.05), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.university-traditions .container {
+  position: relative;
+  z-index: 1;
+}
+
+.traditions-main-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--nav-font);
+}
+
+.tradition-section {
+  margin-bottom: 4rem;
+}
+
+.tradition-section:last-child {
+  margin-bottom: 0;
+}
+
+.tradition-subtitle {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.tradition-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 2rem;
+  max-width: 200px;
+}
+
+.tradition-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0 3rem;
+}
+
+.tradition-carousel-track {
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  flex: 1;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.tradition-image {
+  flex: 0 0 calc(33.333% - 0.67rem);
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: zoom-in;
+}
+
+.tradition-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.tradition-image:hover img {
+  transform: scale(1.05);
+}
+
+.tradition-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.tradition-lightbox.is-open {
+  display: flex;
+}
+
+.tradition-lightbox img {
+  max-width: min(92vw, 1200px);
+  max-height: 85vh;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  object-fit: contain;
+  background: #000;
+}
+
+.tradition-lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #ffffff;
+  color: var(--maroon);
+  border: none;
+  border-radius: 9999px;
+  width: 42px;
+  height: 42px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tradition-lightbox-close:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.tradition-title {
+  text-align: center;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.tradition-nav {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  z-index: 10;
+  border: none;
+}
+
+.tradition-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.tradition-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: scale(1.1);
+}
+
+.tradition-nav:active {
+  transform: scale(0.95);
+}
+
+.tradition-nav:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.tradition-nav span {
+  display: block;
+  line-height: 1;
+}
+
+@media (max-width: 920px) {
+  .university-traditions {
+    padding: 3rem 0;
+  }
+
+  .tradition-section {
+    margin-bottom: 3rem;
+  }
+
+  .tradition-carousel-wrapper {
+    padding: 0 2.5rem;
+  }
+
+  .tradition-image {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+
+  .tradition-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .university-traditions {
+    padding: 2rem 0;
+  }
+
+  .traditions-main-title {
+    margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .tradition-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .tradition-carousel-wrapper {
+    padding: 0 2rem;
+    gap: 0.5rem;
+  }
+
+  .tradition-image {
+    flex: 0 0 100%;
+  }
+
+  .tradition-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .tradition-divider {
+    max-width: 150px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS - CAMPUS LIFE PAGE
+   ============================================ */
+
+/* Large Desktop (1400px) */
+@media (max-width: 1400px) {
+  .carousel-panel {
+    padding: 4.5rem 2.5rem;
+  }
+  
+  .panel-content {
+    max-width: 800px;
+    padding: 1.75rem;
+  }
+}
+
+/* Desktop (1200px) */
+@media (max-width: 1200px) {
+  .carousel-panel {
+    padding: 4rem 2rem;
+  }
+  
+  .panel-content {
+    max-width: 750px;
+    padding: 1.5rem;
+  }
+}
+
+/* Tablet (992px) */
+@media (max-width: 992px) {
+  .campus-life-carousel {
+    padding: 3rem 0;
+  }
+  
+  .carousel-panel {
+    padding: 3.5rem 1.5rem;
+    min-height: 350px;
+  }
+  
+  .panel-content {
+    max-width: 100%;
+    padding: 1.25rem;
+  }
+  
+  .panel-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .campus-life-carousel {
+    padding: 2.5rem 0;
+  }
+  
+  .carousel-panel {
+    padding: 3rem 1.25rem;
+    min-height: 320px;
+  }
+  
+  .panel-content {
+    padding: 1rem;
+  }
+  
+  .panel-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 1.25rem;
+  }
+  
+  .panel-description {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+  }
+}
+
+/* Smartphone (640px) */
+@media (max-width: 640px) {
+  .campus-life-carousel {
+    padding: 2rem 0;
+  }
+  
+  .carousel-panel {
+    padding: 2.5rem 1rem;
+    min-height: 300px;
+  }
+  
+  .panel-content {
+    padding: 0.875rem;
+  }
+  
+  .panel-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1rem;
+  }
+  
+  .panel-description {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+  
+  .carousel-nav {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Small Smartphone (576px) */
+@media (max-width: 576px) {
+  .campus-life-carousel {
+    padding: 1.5rem 0;
+  }
+  
+  .carousel-panel {
+    padding: 2rem 0.875rem;
+    min-height: 280px;
+  }
+  
+  .panel-content {
+    padding: 0.75rem;
+  }
+  
+  .panel-title {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    margin-bottom: 0.875rem;
+  }
+  
+  .panel-description {
+    font-size: clamp(0.8125rem, 2vw, 0.95rem);
+  }
+  
+  .carousel-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}

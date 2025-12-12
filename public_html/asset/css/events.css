@@ -1,0 +1,37 @@
+/* Campus Life page specific styles placeholder */
+/* Currently relies on shared site styles. Add Campus Life-only rules here when needed. */
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS - EVENTS PAGE
+   ============================================ */
+
+/* Ensure all images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal scroll */
+.event-section,
+.event-card,
+.event-grid {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Smartphone (640px) */
+@media (max-width: 640px) {
+  /* Mobile optimizations */
+}
+
+/* Small Smartphone (576px) */
+@media (max-width: 576px) {
+  /* Smallest mobile adjustments */
+}

@@ -1,0 +1,539 @@
+/* ============================================
+   PROGRAMS PAGE HERO SECTION
+   ============================================ */
+
+   .programs-page-hero {
+    padding: 6rem 0 6rem;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* Background layers: gradients first, then image */
+    background:
+      radial-gradient(circle at top left, rgba(246, 201, 0, 0.385), transparent 70%),
+      linear-gradient(to right, #fff7df 43%,  #fff7df 5%,  #fff7df 53%, rgba(122,0,25,0.06) 70%),
+      url("../../images/bg.png");
+    /* Background sizes: auto for gradients, cover for image */
+    background-size:
+      auto,
+      auto,
+      cover;
+    /* Background positions: gradients stay in place, image positioned on right */
+    background-position:
+      top left,
+      center,
+      right center;
+    /* Background repeat */
+    background-repeat:
+      no-repeat,
+      no-repeat,
+      no-repeat;
+  }
+  
+  .programs-page-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .programs-page-hero-text {
+    /* Left column content container - styles applied via grid */
+    position: relative;
+  }
+  
+  .programs-page-hero-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+  }
+  
+  .programs-page-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    color: var(--ink);
+  }
+  
+  .programs-page-hero-accent {
+    color: #f6c700;
+  }
+  
+  .programs-page-hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0 0 1rem;
+    max-width: 90%;
+  }
+  
+  .programs-page-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .programs-page-btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--maroon);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  
+  .programs-page-btn-primary:hover {
+    background: var(--maroon-900);
+  }
+  
+  .programs-page-btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #ffffff;
+    color: var(--maroon);
+    font-weight: 600;
+    border: 2px solid var(--maroon);
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .programs-page-btn-secondary:hover {
+    background: var(--maroon);
+    color: #ffffff;
+  }
+  
+  .programs-page-hero-pills {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .programs-page-pill {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    background: #f3f4f6;
+    color: var(--maroon);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .programs-page-pill:hover {
+    background: var(--maroon);
+    color: #ffffff;
+  }
+  
+  .programs-page-hero-card {
+    order: 0;
+  }
+  
+  .programs-page-hero-card-content {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 18px 45px rgba(15,23,42,0.08);
+  }
+  
+  /* Responsive Design for Programs Page Hero */
+  
+  /* Large Desktop (1440px+) - Image positioned nicely on right */
+  @media (min-width: 1440px) {
+    .programs-page-hero {
+      background-size:
+        auto,
+        auto,
+        cover;
+      background-position:
+        top left,
+        center,
+        right center;
+    }
+  }
+  
+  /* Desktop (1200px - 1439px) */
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .programs-page-hero {
+      background-size:
+        auto,
+        auto,
+        cover;
+      background-position:
+        top left,
+        center,
+        right center;
+    }
+  }
+  
+  @media (max-width: 1400px) {
+    .programs-page-hero-inner {
+      gap: 2.5rem;
+    }
+  }
+  
+  /* Tablet (992px - 1199px) - Adjust image positioning */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .programs-page-hero {
+      background-size:
+        auto,
+        auto,
+        cover;
+      background-position:
+        top left,
+        center,
+        right center;
+    }
+    
+    .programs-page-hero-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .programs-page-hero-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .programs-page-hero-card {
+      order: -1;
+    }
+  }
+  
+  /* Tablet Portrait (768px - 991px) - Image less prominent */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .programs-page-hero {
+      background-size:
+        auto,
+        auto,
+        contain;
+      background-position:
+        top left,
+        center,
+        right bottom;
+      padding: 4rem 0 4rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .programs-page-hero {
+      padding: 4rem 0 4rem;
+      /* On mobile, position image to not interfere with text */
+      background-size:
+        auto,
+        auto,
+        cover;
+      background-position:
+        top left,
+        center,
+        center right;
+      /* Add overlay for better text readability on mobile */
+      background-image:
+        radial-gradient(circle at top left, rgba(246, 201, 0, 0.385), transparent 70%),
+        linear-gradient(to right, #fff7df 60%, rgba(255, 247, 223, 0.9) 70%, rgba(255, 247, 223, 0.95) 80%),
+        url("../../images/bg.png");
+    }
+    
+    .programs-page-hero-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+    }
+    
+    .programs-page-hero-description {
+      max-width: 100%;
+    }
+    
+    .programs-page-hero-description {
+      max-width: 100%;
+      font-size: 0.9375rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .programs-page-hero-pills {
+      margin-top: 0.75rem;
+    }
+  }
+  
+  /* Note: 576px breakpoint already handled above */
+  
+  /* Academic Programs page layout */
+  /* Program description paragraph spacing inside program cards */
+  .prog-card .body p {
+    margin-top: .1rem;
+  }
+  
+  #offerings .programs-section{
+    padding: 0px !important;
+  }
+  
+  /* Degree badge chips under each program summary */
+  .prog-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin-top: .5rem;
+  }
+  
+  /* Program offerings grid container on the Programs page */
+  #offerings .grid {
+    gap: 20px;
+  }
+  
+  /* Ensure offerings grid uses single-column stacking for content boxes */
+  #offerings .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding-bottom: 30px;
+  }
+  
+  /* Card shell */
+  #offerings .prog-card {
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .15);
+    background: linear-gradient(rgba(128, 0, 0, 0.7), rgba(128, 0, 0, 1));
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  #offerings .prog-card:hover,
+  #offerings .prog-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, .22);
+  }
+  
+  /* Stacked layout for image + copy */
+  #offerings .prog-card .body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  /* Program thumbnail container inside offerings section */
+  /* Fixed frame size: 500x300px equivalent (maintains aspect ratio) */
+  .prog-card .prog-media {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 0;
+    margin: 0px;
+    /* Fixed dimensions - frame will not change regardless of image size */
+    min-height: 300px;
+    max-height: 300px;
+  }
+
+  .prog-card .prog-media a {
+    display: block;
+    height: 100%;
+  }
+  
+  /* Images inside program media maintain full coverage */
+  /* Frame size is fixed - images will be cropped to fit using object-fit: cover */
+  .prog-card .prog-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure image fills container without breaking layout */
+    object-position: center;
+  }
+  
+  /* Text block */
+  #offerings .prog-copy {
+    padding: 0;
+    width: 100%;
+    background: linear-gradient(rgba(128, 0, 0, 0.8), rgba(128, 0, 0, 1));
+    text-align: center;
+  }
+  
+  /* Title tag styling similar to sample */
+  .prog-card .prog-copy h3 {
+    margin: 0;
+    display: block;
+    padding: .95rem .85rem;
+   font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300;
+    transform: none;
+    box-shadow: none;
+    font-family: 'Arial, Helvetica, sans-serif'
+  }
+  
+  #offerings .prog-copy h3 {
+    color: #fff;
+  }
+  
+  /* ============================================
+     RESPONSIVE BREAKPOINTS - PROGRAMS PAGE
+     ============================================ */
+  
+  /* Large Desktop (1400px) */
+  @media (max-width: 1400px) {
+    #offerings .grid {
+      gap: 18px;
+    }
+  }
+  
+  /* Desktop (1200px) */
+  @media (max-width: 1200px) {
+    #offerings .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    
+    .courses-heading h2 {
+      max-width: 100%;
+      padding: 0.6rem 1.4rem;
+    }
+  }
+  
+  /* Tablet (992px) */
+  @media (max-width: 992px) {
+    #offerings .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    
+    .prog-card .prog-media {
+      height: 250px;
+    }
+    
+    .courses-heading h2 {
+      font-size: 1.1rem;
+      padding: 0.55rem 1.2rem;
+    }
+  }
+  
+  /* Tablet (768px) */
+  @media (max-width: 768px) {
+    #offerings .grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+    
+    .prog-card .prog-media {
+      height: 200px;
+    }
+    
+    .courses-heading h2 {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+    
+    .prog-badges {
+      gap: 0.35rem;
+    }
+  }
+  
+  /* Smartphone (640px) */
+  @media (max-width: 640px) {
+    #offerings .grid {
+      gap: 1rem;
+    }
+    
+    .prog-card .prog-media {
+      height: 180px;
+    }
+    
+    .prog-card .prog-copy h3 {
+      font-size: 12px;
+      padding: 0.85rem 0.75rem;
+    }
+    
+    .courses-heading h2 {
+      font-size: 0.95rem;
+      padding: 0.45rem 0.9rem;
+    }
+    
+    .prog-badges {
+      gap: 0.3rem;
+    }
+  }
+  
+  /* Small Smartphone (576px) */
+  @media (max-width: 576px) {
+    .prog-card .prog-media {
+      height: 160px;
+    }
+    
+    .prog-card .prog-copy h3 {
+      font-size: 11px;
+      padding: 0.75rem 0.65rem;
+    }
+    
+    .courses-heading h2 {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+  
+  
+  /* #offerings .prog-card:nth-child(1) { background-color: #140d2f; }
+  #offerings .prog-card:nth-child(2) { background-color: #f67280; }
+  #offerings .prog-card:nth-child(3) { background-color: #c06c84; }
+  #offerings .prog-card:nth-child(4) { background-color: #6c5b7b; }
+  #offerings .prog-card:nth-child(5) { background-color: #355c7d; }
+  #offerings .prog-card:nth-child(6) { background-color: #99b898; }
+  #offerings .prog-card:nth-child(7) { background-color: #feceab; }
+  #offerings .prog-card:nth-child(8) { background-color: #ff847c; } */
+  
+  /* Courses offered heading styling */
+  .courses-heading {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  
+  }
+  
+  .courses-heading h2 {
+    background: linear-gradient(90deg, #d4af37 0%, #f6d76c 50%, #d4af37 100%);
+    color:maroon;
+    padding: .65rem 1.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    border-radius: 0px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .25);
+    width:100%;
+    max-width:1500px;
+    margin:0 auto;
+  }
+  
+  /* ============================================
+     LARGE SCREEN RESPONSIVE CONSTRAINTS - PROGRAMS PAGE
+     ============================================ */
+  
+  /* Extra Large Desktops (1600px+) */
+  @media (min-width: 1600px) {
+    .program-offerings-grid {
+      max-width: 1450px;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Ultra Wide Screens (1920px+) */
+  @media (min-width: 1920px) {
+    .program-offerings-grid {
+      max-width: 1450px;
+    }
+  }
+  
+  /* 4K and Ultra Wide (2560px+) */
+  @media (min-width: 2560px) {
+    .program-offerings-grid {
+      max-width: 1600px;
+    }
+  }
+  

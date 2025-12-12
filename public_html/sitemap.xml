@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://pupbc.site/</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/homepage.php</loc>
+  </url>
+
+  <!-- Pages folder -->
+  <url>
+    <loc>https://pupbc.site/pages/about.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/admission_guide.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/announcement.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/campus_officials.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/campuslife.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/citizen_charter.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/student_handbook.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/contact.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/event.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/faq.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/forms.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/history.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/news.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/news_detail.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/programs.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/puphymn.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/search.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/services.php</loc>
+  </url>
+  <url>
+    <loc>https://pupbc.site/pages/view-campus-offices.php</loc>
+  </url>
+
+</urlset>

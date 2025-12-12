@@ -1,0 +1,252 @@
+/**
+ * Hero Video Component Styles
+ * 
+ * Independent stylesheet for the hero video component.
+ * You can customize the size, overlay, and other properties here.
+ */
+
+/* Backward compatibility: .hero class also works */
+.hero,
+.hero-video-section {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  overflow: hidden;
+  width: 100%;
+  
+  /* Default height - can be overridden via CSS variables */
+  height: var(--hero-video-height, auto);
+  min-height: var(--hero-video-min-height, 500px);
+  max-height: var(--hero-video-max-height, none);
+  
+  /* Background fallback (shown when video is loading or unavailable) - neutral gray */
+  background: #1a1a1a;
+}
+
+/* When video-only (no content), remove all color tints */
+.hero-video-section:has(.hero-video-element):not(:has(.hero-video-content)),
+.hero:has(.hero-video-element):not(:has(.hero-inner)),
+.hero-video-section.video-only,
+.hero.video-only {
+  background: transparent;
+}
+
+/* Override site.css hero styles when video-only */
+.hero.video-only {
+  background: transparent !important;
+}
+
+.hero.video-only::before {
+  display: none !important;
+}
+
+/* Override site.css red overlay for all hero sections */
+.hero::before {
+  display: none !important;
+}
+
+/* Video Element */
+.hero-video,
+.hero-video-element {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+  filter: brightness(var(--hero-video-brightness, 1.0));
+}
+
+/* Natural video - no filters when brightness is 1.0 or higher */
+.hero-video-element[style*="--hero-video-brightness: 1"],
+.hero-video-element[style*="--hero-video-brightness: 1.0"],
+.hero-video-section:not(:has(.hero-video-content)) .hero-video-element,
+.hero-video-section.video-only .hero-video-element,
+.hero.video-only .hero-video-element {
+  filter: brightness(1.0) !important;
+}
+
+/* Gradient Overlay */
+.hero-video-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  /* Neutral overlay - no red tint, natural colors */
+  background:
+    radial-gradient(1200px 400px at 50% 50%, rgba(0, 0, 0, .2), transparent 70%),
+    linear-gradient(180deg, rgba(0, 0, 0, .15), rgba(0, 0, 0, .3));
+  opacity: 0.5;
+}
+
+
+
+/* Subtle overlay for text readability - lighter version */
+.hero:not(.video-only) .hero-video-overlay {
+  background:
+    radial-gradient(1200px 400px at 50% 50%, rgba(0, 0, 0, .3), transparent 70%),
+    linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .4));
+  opacity: 0.5;
+}
+
+/* Content Container */
+.hero-inner,
+.hero-video-content {
+  position: relative;
+  z-index: 1;
+  padding: 64px 0 56px;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 2rem;
+  align-items: center;
+  min-height: 100%;
+}
+
+/* Centered text layout */
+.hero-text-center,
+.hero-inner.hero-text-center,
+.hero-video-content.hero-text-center,
+.hero-video-content:has(.hero-text-center) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: 1fr;
+  min-height: 100%;
+  padding: 0;
+  height: 100%;
+}
+
+.hero-text-center > div,
+.hero-inner.hero-text-center > div,
+.hero-video-content.hero-text-center > div,
+.hero-video-content:has(.hero-text-center) > div {
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+.hero-video-content > * {
+  grid-column: 1;
+}
+
+/* Typography */
+.hero-video-section h1 {
+  font-size: clamp(1.8rem, 1.2rem + 2vw, 3rem);
+  line-height: 1.05;
+  margin: 0;
+}
+
+/* Centered hero text styling */
+.hero-text-center h1 {
+  font-size: clamp(1.5rem, 1rem + 2.5vw, 2.5rem);
+  line-height: 2;
+  margin: 0;
+  color: #f3b233;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7),
+               0 0 20px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  /* Use same font as header "POLYTECHNIC UNIVERSITY OF THE PHILIPPINES" */
+  font-family: var(--nav-font, "Trajan Pro", "Trajan Pro 3", "Trajan", "Cinzel", "Times New Roman", Times, serif);
+}
+
+.hero-video-section p {
+  margin: .85rem 0 1.25rem;
+  font-size: 1.05rem;
+  opacity: .95;
+}
+
+/* Responsive Design */
+@media (max-width: 920px) {
+  .hero-video-content {
+    grid-template-columns: 1fr;
+    padding: 48px 0 40px;
+  }
+  
+  .hero-video-section {
+    min-height: var(--hero-video-min-height, 350px);
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-video-content {
+    padding: 36px 0 32px;
+  }
+  
+  .hero-video-section {
+    min-height: var(--hero-video-min-height, 300px);
+  }
+  
+  .hero-video-section h1 {
+    font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
+  }
+  
+  .hero-video-section p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
+   CUSTOM SIZE CLASSES
+   Add these classes to customize the hero size
+   ============================================ */
+
+/* Small Hero - 300px height */
+.hero-video-section.custom-small,
+.hero.custom-small {
+  --hero-video-height: 300px;
+  --hero-video-min-height: 250px;
+}
+
+.hero-video-section.custom-small .hero-video-content,
+.hero.custom-small .hero-inner {
+  padding: 32px 0 28px;
+}
+
+/* Medium Hero - 500px height */
+.hero-video-section.custom-medium,
+.hero.custom-medium {
+  --hero-video-height: 500px;
+  --hero-video-min-height: 400px;
+}
+
+/* Large Hero - 700px height */
+.hero-video-section.custom-large,
+.hero.custom-large {
+  --hero-video-height: 700px;
+  --hero-video-min-height: 600px;
+}
+
+/* Fullscreen Hero - 100vh */
+.hero-video-section.custom-fullscreen,
+.hero.custom-fullscreen {
+  --hero-video-height: 100vh;
+  --hero-video-min-height: 500px;
+}
+
+/* Compact Hero - 250px height */
+.hero-video-section.custom-compact,
+.hero.custom-compact {
+  --hero-video-height: 250px;
+  --hero-video-min-height: 200px;
+}
+
+.hero-video-section.custom-compact .hero-video-content,
+.hero.custom-compact .hero-inner {
+  padding: 24px 0 20px;
+}
+
+.hero-video-section.custom-compact h1,
+.hero.custom-compact h1 {
+  font-size: clamp(1.5rem, 1rem + 1.5vw, 2rem);
+}
+
+/* Tall Hero - 800px height */
+.hero-video-section.custom-tall,
+.hero.custom-tall {
+  --hero-video-height: 800px;
+  --hero-video-min-height: 700px;
+}
+
