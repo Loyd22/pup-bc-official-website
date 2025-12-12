@@ -1,5 +1,9 @@
 <?php
-declare(strict_types=1);
+$local = __DIR__ . '/email_config.local.php';
+if (file_exists($local)) {
+  return require $local;
+}
+
 
 /**
  * Email Configuration for Password Reset
@@ -20,7 +24,7 @@ return [
     'smtp_host' => 'smtp.gmail.com',        // Replace with your SMTP host
     'smtp_port' => 587,                     // Replace with your SMTP port (587 for TLS, 465 for SSL)
     'smtp_username' => 'johnloydviray22@gmail.com',  // Replace with your SMTP username
-    'smtp_password' => 'fjysshmofhvwhxce',     // Replace with your SMTP app password
+    'smtp_password' => 'youpassword',     // Replace with your SMTP app password
     'smtp_encryption' => 'tls',             // 'tls' or 'ssl'
     'from_email' => 'johnloydviray22@gmail.com',
     'from_name' => 'PUPBC Admin (no-reply)',

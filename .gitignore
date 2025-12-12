@@ -1,0 +1,14 @@
+# Secrets
+.env
+/public_html/admin/includes/email_config.local.php
+**/email_config.local.php
+config/smtp.local.php
+**/smtp.local.php
+
+# Common clutter
+.DS_Store
+Thumbs.db
+
+# Dependencies (if you have these)
+vendor/
+node_modules/
